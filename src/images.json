@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "french1",
+        "img": "../public/images/french1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "french2",
+        "img": "../public/images/french2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "french3",
+        "img": "../public/images/french3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "french4",
+        "img": "../public/images/french4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "french5",
+        "img": "../public/images/french5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "french6",
+        "img": "../public/images/french6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "french7",
+        "img": "../public/images/french7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "french8",
+        "img": "../public/images/french8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "french9",
+        "img": "../public/images/french9.jpg"
+    },
+    {
+        "id": 10,
+        "name": "french10",
+        "img": "../public/images/french10.jpg"
+    },
+    {
+        "id": 11,
+        "name": "french11",
+        "img": "../public/images/french11.jpg"
+    },
+    {
+        "id": 12,
+        "name": "french12",
+        "img": "../public/images/french12.jpg"
+    }
+]
