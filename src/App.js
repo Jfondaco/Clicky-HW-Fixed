@@ -15,12 +15,13 @@ class App extends Component {
     images,
     highScore: 0,
     guessed: [],
+    correct: true
     // isCorrect: false
   }
 }
   //need a click check function determines right or wrong and shuffles
 
-  //need function for moving cards around every click
+  //need function for moving cards around every click (googled shuffle array and found this)
   moveCards = (arra1) => {
         var ctr = arra1.length, temp, index;
     
@@ -37,6 +38,7 @@ class App extends Component {
         }
         return arra1;
     }
+  
   
 
   //increases score and sets high score
@@ -56,10 +58,30 @@ class App extends Component {
   wrong = () => {
     this.setState({
       score: 0,
-      guessed: []
+      guessed: [],
+      correct: false
     })
   }
 
+  checkGuessed = (name) => {
+    //if guessed choice is already in guessed[] then correct = false else score ++
+    console.log("checkGuessed running")
+    console.log(this.state.guessed)
+    let guessedArr = this.state.guessed
+    var alreadyGuessed
+    console.log("name", name)
+
+    if (guessedArr.toString().indexOf(name) > -1){
+      alreadyGuessed = true
+      console.log("alreadyGuessed: ", alreadyGuessed)
+      this.wrong()
+    }
+    else  {
+      alreadyGuessed = false
+      this.scoreUp();
+      this.setState({guessed: this.state.guessed.push(name)})
+    }        
+  }
 
   render() {
     return (
@@ -67,15 +89,21 @@ class App extends Component {
         <Score
           score={this.state.score}
           highScore={this.state.highScore}
+          correct = {this.state.correct}
         />
         <Body>
+        <div className="row">
           {this.state.images.map(image=> (
             <Cards
               key = {image.id}
               img={image.img}
               name={image.name}
+              correct={this.state.correct}
+              onClick={() => this.checkGuessed(image.name)}
             />
+        
           ))}
+          </div>
         </Body>
       </div>
     );
